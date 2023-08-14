@@ -1,0 +1,28 @@
+-rwxrwxr-x 1 farhantausif farhantausif 16784 জুলাই     16 14:58 a.out
+-rw-rw-r-- 1 farhantausif farhantausif   295 জুলাই     16 14:58 Lab-01_01.c
+
+Here,
+
+(-rwx)(rw-)(r--)
+ USER GROUP OTHERS
+ 
+ r -> read
+ w -> write
+ x -> execute 
+ 
+ rwx in USER -> USER can read,write and execute that file
+ 
+ chmod 700 a.out 
+ 
+ 700 --> 111 000 000 in octal 
+ 
+ means   rwx --- ---
+ 
+ csv --> comma seperated value
+ 
+ gcc -o sinlb Lab-01_01.c
+ ./sinlb.out > sin.csv
+ 
+ Print a header outside the data
+ e.g. printf(" \"x\",\"sin(x)\"\n"); Strings in Quote
+no spaces after commma 

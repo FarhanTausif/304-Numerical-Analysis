@@ -1,0 +1,10 @@
+lo --> loopback address
+layer1: link/ether [Mac Address] 48 bit
+layer2:
+layer3: IPV4 (32 bit) written in dot seperated decimal
+		IPV6 (128 bit) word(16 bit) written in hex, colon seperated
+		
+		ip a s
+		ip r s (ip route show)
+		
+		ping -n (ipAddress)

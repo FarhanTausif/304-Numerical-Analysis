@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<math.h>
+
+#define n 11
+
+#define f(x) (x)*(x) + 1
+
+int main(){
+	
+	double a, b, h;
+	printf("Enter boundary values:");
+	scanf("%lf %lf", &a, &b);
+	
+	h = (b - a) / (n - 1);
+	
+	double x[n], y[n];
+	
+	x[0] = a;
+	
+	for(int i = 1; i < n-1; ++i){
+		x[i] = x[i-1] + h;
+	}
+	
+	x[n - 1] = b;
+	
+	for(int i = 0; i < n; ++i){
+		y[i] = f(x[i]);
+	}
+	
+	double Sum_X = (y[0] + y[n-1]);
+	double Sum_I = 0.0;
+	
+	for(int i = 1; i < n-1; i++){
+		Sum_I += y[i];
+	}
+	
+	double I = h*(Sum_X+2*Sum_I)/2;
+	
+	printf("Trapezoidal Rule  - - - - - - - - - - \n");
+	printf("Integral Value = %lf\n", I);
+	printf("- - - - - - - - - - - - - - - - - - - \n");
+	
+	return 0;
+}
